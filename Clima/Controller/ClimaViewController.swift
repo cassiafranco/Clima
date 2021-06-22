@@ -8,22 +8,48 @@
 
 import UIKit
 
-class ClimaViewController: UIViewController {
-
+class ClimaViewController: UIViewController, UITextFieldDelegate{
+    
+    
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var conditionLabel: UIImageView!
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    
+    var weatherManager = WeatherManager()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        searchTextField.delegate = self
+        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func searchPressed(_ sender: UIButton) {
+        searchTextField.endEditing(true)
+        print(searchTextField.text!)
     }
-    */
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        print(searchTextField.text!)
+        return true
+    }
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != ""{
+            return true
+            
+        }else {
+            textField.placeholder = "Type something"
+            return false
+        }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city )
+        }
+        searchTextField.text = ""
+    }
 
 }

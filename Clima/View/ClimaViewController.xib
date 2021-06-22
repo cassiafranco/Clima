@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClimaViewController" customModule="Clima" customModuleProvider="target">
             <connections>
+                <outlet property="cityLabel" destination="TWR-lM-7Nu" id="UW2-uk-YVN"/>
+                <outlet property="conditionLabel" destination="HZz-IO-idN" id="Den-iO-HaC"/>
+                <outlet property="searchTextField" destination="VDE-Ng-sZl" id="SvX-qM-EhL"/>
+                <outlet property="temperatureLabel" destination="2US-Z1-lyF" id="xv7-sQ-JTS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -50,6 +54,9 @@
                                     </constraints>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                    <connections>
+                                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="e2b-XY-ET9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
