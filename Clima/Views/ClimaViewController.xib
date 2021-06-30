@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,14 +41,17 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="locationPressed:" destination="-1" eventType="touchUpInside" id="ejU-9b-hey"/>
+                                    </connections>
                                 </button>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VDE-Ng-sZl">
                                     <rect key="frame" x="50" y="0.0" width="274" height="40"/>
-                                    <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" systemColor="systemFillColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-BC-FjY">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4u9-BC-FjY">
                                     <rect key="frame" x="334" y="1" width="40" height="38"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="40" id="Enh-eY-OBf"/>
@@ -69,7 +74,7 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Y1-hS-GwU">
-                            <rect key="frame" x="175" y="176" width="199" height="119.5"/>
+                            <rect key="frame" x="176" y="176" width="198" height="119.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2US-Z1-lyF">
                                     <rect key="frame" x="0.0" y="0.0" width="93" height="119.5"/>
@@ -78,13 +83,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5b1-c3-p6N">
-                                    <rect key="frame" x="93" y="0.0" width="39" height="119.5"/>
+                                    <rect key="frame" x="93" y="0.0" width="38" height="119.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-bD-q67">
-                                    <rect key="frame" x="132" y="0.0" width="67" height="119.5"/>
+                                    <rect key="frame" x="131" y="0.0" width="67" height="119.5"/>
                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="100"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -92,7 +97,7 @@
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brazil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWR-lM-7Nu">
-                            <rect key="frame" x="303.5" y="303.5" width="70.5" height="36"/>
+                            <rect key="frame" x="303" y="303.5" width="71" height="36"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -107,6 +112,7 @@
                     </constraints>
                 </stackView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RYj-fD-ien" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8KZ-CW-ejs"/>
@@ -120,14 +126,16 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Hq-jo-SvL" secondAttribute="bottom" id="p7q-Em-xv4"/>
                 <constraint firstItem="RYj-fD-ien" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xn8-rd-k8Z"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="73.913043478260875" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
         <image name="light_background" width="662" height="662"/>
-        <image name="location.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
-        <image name="sun.max" catalog="system" width="64" height="62"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
